@@ -20,7 +20,7 @@ Each image is in of size of 512x512x3 and of .png format.
 The data.rar file comprises of train, test and val folders, each has sub-folders in the name: Images and Masks.
 The data.rar file needs to be in the main directory.
 
-To train the mode, go into the "U-net model" folder and run the sccript: #python main.py.
+#To train the mode, go into the "U-net model" folder and run the sccript: python main.py.
 
 ..................
 ...............
