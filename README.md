@@ -14,7 +14,7 @@ which was created by Olaf Ronneberger, Philipp Fischer, Thomas Brox in 2015 at t
 Primarily, this Deep Neural Network (DNN) is also been trained on  for Biomedical Imagae diagnosis for cell detection, autonomous vehicle,
 geo-sensing etc. The architecture has contraction path ENCODER and Expansion path DECODER.
 
-The Dataset comprises of 11,298 images of cracks and 11, 298 masks created for them.
+The Dataset(gdrive link: ) comprises of 11,298 images of cracks and 11, 298 masks created for them.
 Each image is in of size of 512x512x3 and of .png format.
 
 The data.rar file comprises of train, test and val folders, each has sub-folders in the name: Images and Masks.
