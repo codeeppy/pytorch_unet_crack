@@ -27,8 +27,8 @@ def add_elastic_transform(image, alpha, sigma, pad_size=30, seed=None):
     dy = gaussian_filter((random_state.rand(*shape) * 2 - 1),
                          sigma, mode="constant", cval=0) * alpha
 
-    x, y = np.meshgrid(np.arange(shape[1]), np.arange(shape[0]))
-    indices = np.reshape(y+dy, (-1, 1)), np.reshape(x+dx, (-1, 1))
+    x, y, z = np.meshgrid(np.arange(shape[0]), np.arange(shape[1]), np.arange(shape[2]))
+    indices = np.reshape(y+dy, (-1, 1)), np.reshape(x+dx, (-1, 1)), np.reshape(z, (-1, 1))
     return cropping(map_coordinates(image, indices, order=1).reshape(shape), 512, pad_size, pad_size), seed
 
 
@@ -297,7 +297,7 @@ def image_concatenate(image, crop_num1, crop_num2, dim1, dim2):
 
 if __name__ == "__main__":
     from PIL import Image
-
+def normalization(image, max, min):
     b = Image.open("../data/train/images/14.png")
     c = Image.open("../data/train/masks/14.png")
 
